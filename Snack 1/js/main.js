@@ -6,5 +6,3 @@ function getPostTitle(id) {
             .catch(reject)
     });
 }
-
-console.log(getPostTitle(1))
