@@ -13,6 +13,13 @@ function getPost(id) {
             .then(response => response.json())
             .then(obj => resolve(obj))
             .catch(reject)
+
+        const promiseUser = new Promise((resolve, reject) => {
+            fetch(`https://dummyjson.com/users/${post.userId}`)
+                .then(response => response.json())
+                .then(obj => resolve(obj))
+                .catch(reject)
+        });
     });
 
 
