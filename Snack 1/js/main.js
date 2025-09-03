@@ -6,3 +6,14 @@ function getPostTitle(id) {
             .catch(reject)
     });
 }
+
+function getPost(id) {
+    const promisePost = new Promise((resolve, reject) => {
+        fetch(`https://dummyjson.com/posts/${id}`)
+            .then(response => response.json())
+            .then(obj => resolve(obj))
+            .catch(reject)
+    });
+
+
+}
